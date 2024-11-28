@@ -1,0 +1,79 @@
+[1.276s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.276s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5439d473a0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5439d473a0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f5439d477f0>)
+[1.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.600s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.600s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/natsu/ros2_ws/src/mypkg/mypkg'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.636s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.636s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.636s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.636s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.636s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.401s] ERROR:colcon.colcon_core.package_identification:Exception in package identification extension 'python_setup_py' in '.': Command '['/usr/bin/python3', '-c', 'import sys;from contextlib import suppress;exec("with suppress(ImportError):    from setuptools.extern.packaging.specifiers    import SpecifierSet");exec("with suppress(ImportError):    from packaging.specifiers import SpecifierSet");from distutils.core import run_setup;dist = run_setup(    \'setup.py\', script_args=(\'--dry-run\',), stop_after=\'config\');skip_keys = (\'cmdclass\', \'distclass\', \'ext_modules\', \'metadata\');data = {    key: value for key, value in dist.__dict__.items()     if (        not key.startswith(\'_\') and         not callable(value) and         key not in skip_keys and         key not in dist.display_option_names    )};data[\'metadata\'] = {    k: v for k, v in dist.metadata.__dict__.items()     if k not in (\'license_files\', \'provides_extras\')};sys.stdout.buffer.write(repr(data).encode(\'utf-8\'))']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/package_identification/__init__.py", line 144, in _identify
+    retval = extension.identify(_reused_descriptor_instance)
+  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 48, in identify
+    config = get_setup_information(setup_py)
+  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 249, in get_setup_information
+    _setup_information_cache[hashable_env] = _get_setup_information(
+  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 296, in _get_setup_information
+    result = subprocess.run(
+  File "/usr/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '-c', 'import sys;from contextlib import suppress;exec("with suppress(ImportError):    from setuptools.extern.packaging.specifiers    import SpecifierSet");exec("with suppress(ImportError):    from packaging.specifiers import SpecifierSet");from distutils.core import run_setup;dist = run_setup(    \'setup.py\', script_args=(\'--dry-run\',), stop_after=\'config\');skip_keys = (\'cmdclass\', \'distclass\', \'ext_modules\', \'metadata\');data = {    key: value for key, value in dist.__dict__.items()     if (        not key.startswith(\'_\') and         not callable(value) and         key not in skip_keys and         key not in dist.display_option_names    )};data[\'metadata\'] = {    k: v for k, v in dist.metadata.__dict__.items()     if k not in (\'license_files\', \'provides_extras\')};sys.stdout.buffer.write(repr(data).encode(\'utf-8\'))']' returned non-zero exit status 1.
+
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.440s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/natsu/ros2_ws/install
+[2.442s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 256 installed packages in /opt/ros/foxy
+[2.443s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.563s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.564s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.565s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.565s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.565s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.565s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.626s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.626s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.626s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.626s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.669s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[2.669s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.676s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.676s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/local_setup.ps1'
+[2.678s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/natsu/ros2_ws/src/mypkg/mypkg/install/_local_setup_util_ps1.py'
+[2.679s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/setup.ps1'
+[2.680s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/local_setup.sh'
+[2.681s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/natsu/ros2_ws/src/mypkg/mypkg/install/_local_setup_util_sh.py'
+[2.681s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/setup.sh'
+[2.683s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/local_setup.bash'
+[2.684s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/setup.bash'
+[2.685s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/local_setup.zsh'
+[2.686s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/natsu/ros2_ws/src/mypkg/mypkg/install/setup.zsh'
