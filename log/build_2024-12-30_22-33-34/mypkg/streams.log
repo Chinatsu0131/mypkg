@@ -1,0 +1,25 @@
+[0.510s] Invoking command in '/home/natsu/robosys2024-ros2': PYTHONPATH=/home/natsu/robosys2024-ros2/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/natsu/robosys2024-ros2/build/mypkg/build install --record /home/natsu/robosys2024-ros2/build/mypkg/install.log --install-scripts $base/lib/mypkg --single-version-externally-managed install_data
+[0.631s] running egg_info
+[0.632s] writing build/mypkg/mypkg.egg-info/PKG-INFO
+[0.633s] writing dependency_links to build/mypkg/mypkg.egg-info/dependency_links.txt
+[0.633s] writing entry points to build/mypkg/mypkg.egg-info/entry_points.txt
+[0.633s] writing requirements to build/mypkg/mypkg.egg-info/requires.txt
+[0.633s] writing top-level names to build/mypkg/mypkg.egg-info/top_level.txt
+[0.659s] reading manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[0.660s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[0.660s] running build
+[0.660s] running build_py
+[0.661s] copying mypkg/cpu_load.py -> /home/natsu/robosys2024-ros2/build/mypkg/build/lib/mypkg
+[0.662s] running install
+[0.662s] running install_lib
+[0.663s] copying /home/natsu/robosys2024-ros2/build/mypkg/build/lib/mypkg/cpu_load.py -> /home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages/mypkg
+[0.664s] byte-compiling /home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages/mypkg/cpu_load.py to cpu_load.cpython-38.pyc
+[0.665s] running install_data
+[0.667s] copying launch/talk_listen.launch.py -> /home/natsu/robosys2024-ros2/install/mypkg/share/mypkg
+[0.667s] running install_egg_info
+[0.668s] removing '/home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages/mypkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.669s] Copying build/mypkg/mypkg.egg-info to /home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages/mypkg-0.0.0-py3.8.egg-info
+[0.671s] running install_scripts
+[0.682s] Installing cpu_load script to /home/natsu/robosys2024-ros2/install/mypkg/lib/mypkg
+[0.683s] writing list of installed files to '/home/natsu/robosys2024-ros2/build/mypkg/install.log'
+[0.696s] Invoked command in '/home/natsu/robosys2024-ros2' returned '0': PYTHONPATH=/home/natsu/robosys2024-ros2/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/natsu/robosys2024-ros2/build/mypkg/build install --record /home/natsu/robosys2024-ros2/build/mypkg/install.log --install-scripts $base/lib/mypkg --single-version-externally-managed install_data

@@ -1,4 +1,3 @@
 [console_scripts]
-listener = mypkg.listener:main
-talker = mypkg.talker:main
+cpu_load = mypkg.cpu_load:main
 
