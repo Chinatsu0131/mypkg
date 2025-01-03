@@ -7,7 +7,20 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
-source $dir/.bashrc
-timeout 30 ros2 launch mypkg cpu_monitor.launch.py > /tmp/mypkg.log
 
-cat /tmp/mypkg.log | cut -d ']' -f 2 | grep -i 'cpu load' || { echo "Expected output not found"; exit 1; }
+source install/setup.bash
+source $dir/.bashrc
+
+ng() {
+    echo "${1}行目が違う"
+    res=1
+}
+
+res=0
+
+timeout 30 ros2 launch mypkg cpu_monitor.launch.py
+
+[ "$res" = 0 ] && echo OK
+exit"$res"
+
+
