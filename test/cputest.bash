@@ -18,9 +18,16 @@ ng() {
 
 res=0
 
-timeout 30 ros2 launch mypkg cpu_monitor.launch.py
+timeout 30 ros2 launch mypkg cpu_monitor.launch.py > /tmp/mypkg.log
 
-[ "$res" = 0 ] && echo OK
+
+if ! grep 'Publishing CPU load' /tmp/mypkg.log; then
+    echo "Expected output not found"
+    res=1
+fi
+
+
+[ "$res" = 0 ] && echo "OK"
 exit "$res"
 
 
