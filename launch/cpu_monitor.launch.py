@@ -6,10 +6,12 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    cpu_monitor = launch_ros.actions.Node(
+    cpu_monitor_node = launch_ros.actions.Node(
         package='mypkg',
-        executable='cpu_monitor'
+        executable='cpu_monitor',
+        name='cpu_monitor_node',
+        output='screen'
         )
 
-    return launch.LaunchDescription([cpu_load])
+    return launch.LaunchDescription([cpu_monitor_node])
 
