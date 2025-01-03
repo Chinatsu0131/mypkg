@@ -21,6 +21,6 @@ res=0
 timeout 30 ros2 launch mypkg cpu_monitor.launch.py
 
 [ "$res" = 0 ] && echo OK
-exit"$res"
+exit "$res"
 
 
