@@ -18,8 +18,32 @@ ng() {
 
 res=0
 
+ros2 run mypkg cpu_monitor &
+NODE_PID=$!
 
-timeout 60 ros2 launch mypkg cpu_monitor.launch.py 
+sleep 5
+
+ros2 tpic list | grep "/cpu_load" > /dev/null
+if [ $? -ne 0 ]; then
+    ng "cpu_load トピックが見つかりません"
+fi
+
+timeout 10 ros2 topic echo /cpu_load > output.log &
+ECHO_PID=$!
+
+sleep 10
+kill "$ECHO_PID" 2>/dev/null
+
+if [ -s output.log ]; then
+    grep "現在のCPU負荷率" outpu.log > /dev/null
+    if [ $? -ne 0 ]; then
+	ng "CPU負荷率の出力が正しくありません"
+    fi
+else
+    ng "トピックの出力がありません"
+fi
+
+rm -f outpu.log
 
 
 [ "$res" = 0 ] && echo "OK"
