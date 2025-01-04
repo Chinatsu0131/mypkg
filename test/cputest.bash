@@ -23,7 +23,7 @@ NODE_PID=$!
 
 sleep 5
 
-ros2 tpic list | grep "/cpu_load" > /dev/null
+ros2 topic list | grep "/cpu_load" > /dev/null
 if [ $? -ne 0 ]; then
     ng "cpu_load トピックが見つかりません"
 fi
@@ -35,7 +35,7 @@ sleep 10
 kill "$ECHO_PID" 2>/dev/null
 
 if [ -s output.log ]; then
-    grep "現在のCPU負荷率" outpu.log > /dev/null
+    grep "現在のCPU負荷率" output.log > /dev/null
     if [ $? -ne 0 ]; then
 	ng "CPU負荷率の出力が正しくありません"
     fi
@@ -43,7 +43,7 @@ else
     ng "トピックの出力がありません"
 fi
 
-rm -f outpu.log
+rm -f output.log
 
 
 [ "$res" = 0 ] && echo "OK"
