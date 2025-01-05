@@ -1,3 +1,0 @@
-[console_scripts]
-cpu_monitor = mypkg.cpu_monitor:main
-

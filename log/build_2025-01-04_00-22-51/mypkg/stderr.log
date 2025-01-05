@@ -1,5 +1,0 @@
-  File "/home/natsu/robosys2024-ros2/install/mypkg/lib/python3.8/site-packages/mypkg/cpu_monitor.py", line 18
-    cpu_load = psutil.cpu_percent(interval=None, 2)
-                                                 ^
-SyntaxError: positional argument follows keyword argument
-
