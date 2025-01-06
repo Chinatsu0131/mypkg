@@ -10,7 +10,7 @@
 ## ノード
 - mypkg ディレクトリ内にあるcpu_monitor.py ファイルには、cpu_monitor という名前のノードが実装されています。
 
-- このノードは以下の機能を持ちます。:
+- このノードは以下の機能を持ちます。
     - 1秒ごとに現在のCPU負荷率を取得し、その情報を更新します。
     - cpu_load というトピックにCPU負荷率のデータを送信します。
     - 進捗に基づいたメッセージ送信を行い、負荷率の状況を通知します。
@@ -61,4 +61,4 @@ data: '現在のCPU負荷率 34.93%
     - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html
     - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson9.html
     - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson10.html
-- © 2025 Takumi Kobayshi
+- © 2024 Takumi Kobayshi
