@@ -43,14 +43,11 @@ data: '現在のCPU負荷率 34.93%
 ```
 
 ## ローンチファイル
-パッケージには、launch/cpu_monitor.launch.pyというローンチファイルが含まれていますが、現在は１つのノードのみを使用しているため、直接ノードを実行します。
+パッケージには、launch/cpu_monitor.launch.pyというローンチファイルが含まれていますが、現在は１つのノードのみを実行するため、利用者がローンチファイルを使用する必要はありません。
 
 ## 必要なソフトウェア
 - python 3.8.10 以上
 - ubuntu 22.04 LTS 以上
-- コンテナ
-  - 講師が提供する、Ubuntu 22.04 LTSにROS2をセットアップしたコンテナを使用します。
-  - https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2
 
 ## テスト環境
 - ubuntu 22.04 LTS
@@ -61,7 +58,7 @@ data: '現在のCPU負荷率 34.93%
 ## ライセンス
 - このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可がされます.
 - このパッケージのコードの一部は,下記のスライド(CC-BY-SA 4.0 by Ryuichi Ueda) のものを,本人の許可を得て自身の著作としたものです.
-  - (https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html)
-  - (https://ryuichiueda.github.io/slides_marp/robosys2024/lesson9.html)
-  - (https://ryuichiueda.github.io/slides_marp/robosys2024/lesson10.html)
+    - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html
+    - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson9.html
+    - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson10.html
 - © 2024 Takumi Kobayshi
