@@ -1,5 +1,5 @@
-# cpu_monitor
-**このリポジトリはROS2のパッケージです。**
+# mypkg
+**このリポジトリは、CPUの負荷率を観察するROS2のパッケージです。**
 
 ![test](https://github.com/Chinatsu0131/robosys2024-ros2/actions/workflows/test.yml/badge.svg)
 
@@ -46,8 +46,8 @@ data: '現在のCPU負荷率 34.93%
 パッケージには、launch/cpu_monitor.launch.pyというローンチファイルが含まれていますが、現在は１つのノードのみを実行するため、利用者がローンチファイルを使用する必要はありません。
 
 ## 必要なソフトウェア
-- python 3.8.10 以上
-- ubuntu 22.04 LTS 以上
+- python 
+- ubuntu 22.04 LTS
 
 ## テスト環境
 - ubuntu 22.04 LTS
@@ -61,4 +61,4 @@ data: '現在のCPU負荷率 34.93%
     - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson8.html
     - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson9.html
     - https://ryuichiueda.github.io/slides_marp/robosys2024/lesson10.html
-- © 2024 Takumi Kobayshi
+- © 2025 Takumi Kobayshi
